@@ -1,6 +1,11 @@
 #### Setup & Installation
 
-1. Create a folder for our project. Navigate to your command line and type:
+1. Make sure that you have `npx` installed. If you do not, run:
+```bash
+npm install npx
+```
+
+2. Create a folder for our project. Navigate to your command line and type:
 
 ```bash
 mkdir my-nft
@@ -10,12 +15,12 @@ mkdir my-nft
 cd my-nft
 ```
 
-2. Use `npm init` to initialize the project:
+3. Use `npm init` to initialize the project:
 ```bash
 npm init -y
 ```
 
-3. Create an API Key in Fireblocks:
+4. Create an API Key in Fireblocks:
   - Login to the [Sandbox Workspace](https://sandbox.fireblocks.io)
   - Click on `Developer Center` on the bottom of the left sidebar
   - Click on `API Users` tab

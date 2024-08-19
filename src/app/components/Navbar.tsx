@@ -7,7 +7,7 @@ export default function Navbar() {
       <nav className="container w-auto mx-auto px-6 md:px-12 lg:px-24 py-4 flex justify-between items-center">
         <Link href="https://fireblocks.com">
           <Image
-            src="/images/logo.svg"
+            src="/summer-school-workshop/images/logo.svg"
             alt="Company Logo"
             width={140}
             height={40}

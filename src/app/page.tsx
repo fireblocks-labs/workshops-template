@@ -40,29 +40,29 @@ export default function Home() {
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className={cardClassName}>
-            <h4 className="text-xl font-semibold mb-2">Step 1: Setup</h4>
+            <h4 className="text-xl font-semibold mb-2">General Setup</h4>
             <p className="text-secondary">
               Initialize the project and install dependencies.
             </p>
           </div>
           <div className={cardClassName}>
             <h4 className="text-xl font-semibold mb-2">
-              Step 2: Configure Tailwind CSS
+              Install Open Source Tooling
             </h4>
             <p className="text-secondary">
-              Configure Tailwind for the project.
+              Install and configure some EVM open source tooling like Hardhat and ethers.js
             </p>
           </div>
           <div className={cardClassName}>
             <h4 className="text-xl font-semibold mb-2">
-              Step 3: Build Components
+              Use Fireblocks Developer Tools
             </h4>
-            <p className="text-secondary">Create reusable UI components.</p>
+            <p className="text-secondary">Use the Fireblocks Developer tooling to integrate into Hardhat, Ethers.js and web3.js</p>
           </div>
           <div className={cardClassName}>
-            <h4 className="text-xl font-semibold mb-2">Step 4: Deploy</h4>
+            <h4 className="text-xl font-semibold mb-2">Create, Deploy and Mint an NFT</h4>
             <p className="text-secondary">
-              Deploy your project with best practices.
+              Create a Smart Contract, deploy it using Fireblocks wallet and tools and mint your own NFT on Sepolia
             </p>
           </div>
         </div>

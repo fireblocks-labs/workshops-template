@@ -21,7 +21,7 @@ export default function StepsClient({ steps }: StepsClientProps) {
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
   const [activeStep, setActiveStep] = useState<number>(1);
   const [expandedStep, setExpandedStep] = useState<number | null>(null);
-  const { width, height } = useWindowSize(); 
+  const { width, height } = useWindowSize();
   const allStepsCompleted = completedSteps.length === steps.length;
 
   useEffect(() => {
@@ -63,19 +63,9 @@ export default function StepsClient({ steps }: StepsClientProps) {
             Prerequisites:
           </h3>
           <ul className="list-disc list-inside text-gray-700 mt-3">
-            {/* <li>Basic JavaScript knowledge</li>
-            <li>Node.js version {">"}20 installed.</li>
-            <li>NPM latest version installed</li>
-            <li>Fireblocks Sandbox Workspace</li>
-            <li>Fireblocks API Key</li>
-            <li>A code editor like VS Code</li> */}
-            {
-              stepsPageConfig.prerequisites.map((prerequisite, index)=>{
-                return(
-                  <li key={index}>{ prerequisite.text }</li>
-                )
-              })
-            }
+            {stepsPageConfig.prerequisites.map((prerequisite, index) => {
+              return <li key={index}>{prerequisite.text}</li>;
+            })}
           </ul>
         </div>
       )}
@@ -89,7 +79,7 @@ export default function StepsClient({ steps }: StepsClientProps) {
                 Congratulations!
               </h2>
               <p className="text-lg text-gray-700 mb-8">
-                You have completed the { mainPageConfig.mainTitle } Workshop!
+                You have completed the {mainPageConfig.mainTitle} Workshop!
               </p>
               <button
                 className="bg-gradient-to-r from-blue-500 to-blue-800 text-white px-6 py-3 rounded-2xl hover:from-blue-700 hover:to-blue-700"

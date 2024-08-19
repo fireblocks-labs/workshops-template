@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: "/summer-school-workshop",
-  output: "export",
-  reactStrictMode: true
+  assetPrefix: "/summer-school-workshop/",
+  output: "export"
 };
 
 export default nextConfig;

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { mainPageConfig } from "@/config";
 
 export default function Navbar() {
   return (
@@ -20,13 +21,13 @@ export default function Navbar() {
           <Link href="/steps" className="text-secondary hover:text-primary">
             Guide
           </Link>
-          <Link href="https://sandbox.fireblocks.io" legacyBehavior>
+          <Link href={mainPageConfig.navbarButtonLink} legacyBehavior>
             <a
               className="bg-gradient-to-r from-blue-500 to-blue-800 text-white px-6 py-3 rounded-2xl text-sm hover:from-blue-700 hover:to-blue-700"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Login
+              { mainPageConfig.navbarButtonText }
             </a>
           </Link>
         </div>

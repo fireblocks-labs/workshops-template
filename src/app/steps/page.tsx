@@ -8,7 +8,7 @@ import rehypeHighlight from "rehype-highlight";
 import StepsClient from "./StepsClient";
 import Navbar from "../components/Navbar";
 import React from "react";
-import { stepsData } from "@/lib/steps";
+import { stepsPageConfig } from "@/config";
 
 
 
@@ -28,7 +28,7 @@ async function getStepContent(fileName: string) {
 
 export default async function Steps() {
   const steps = await Promise.all(
-    stepsData.map(async (step) => ({
+    stepsPageConfig.stepsData.map(async (step) => ({
       ...step,
       content: await getStepContent(step.file),
     }))

@@ -5,6 +5,7 @@ import { FiCheckCircle, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import Confetti from "react-confetti";
 import CodeWithCopy from "../components/CodeBlockWithCopy";
 import { useWindowSize } from "react-use";
+import { mainPageConfig, stepsPageConfig } from "@/config";
 
 interface Step {
   id: number;
@@ -43,7 +44,7 @@ export default function StepsClient({ steps }: StepsClientProps) {
 
   const handleNextStep = (currentStepId: number) => {
     setCompletedSteps((prev) => [...prev, currentStepId]);
-    setExpandedStep(currentStepId + 1); // Automatically expand the next step
+    setExpandedStep(currentStepId + 1);
     setActiveStep(currentStepId + 1);
   };
 
@@ -62,12 +63,19 @@ export default function StepsClient({ steps }: StepsClientProps) {
             Prerequisites:
           </h3>
           <ul className="list-disc list-inside text-gray-700 mt-3">
-            <li>Basic JavaScript knowledge</li>
+            {/* <li>Basic JavaScript knowledge</li>
             <li>Node.js version {">"}20 installed.</li>
             <li>NPM latest version installed</li>
             <li>Fireblocks Sandbox Workspace</li>
             <li>Fireblocks API Key</li>
-            <li>A code editor like VS Code</li>
+            <li>A code editor like VS Code</li> */}
+            {
+              stepsPageConfig.prerequisites.map((prerequisite, index)=>{
+                return(
+                  <li key={index}>{ prerequisite.text }</li>
+                )
+              })
+            }
           </ul>
         </div>
       )}
@@ -81,7 +89,7 @@ export default function StepsClient({ steps }: StepsClientProps) {
                 Congratulations!
               </h2>
               <p className="text-lg text-gray-700 mb-8">
-                You have completed the Fireblocks Summer School Workshop!
+                You have completed the { mainPageConfig.mainTitle } Workshop!
               </p>
               <button
                 className="bg-gradient-to-r from-blue-500 to-blue-800 text-white px-6 py-3 rounded-2xl hover:from-blue-700 hover:to-blue-700"

@@ -1,34 +1,30 @@
 import Layout from "./components/Layout";
 import Link from "next/link";
+import { mainPageConfig } from "@/config";
 
 export default function Home() {
-  const cardClassName = "bg-white shadow-lg rounded-lg p-6 shadow-blue-200";
-
+  
   return (
     <Layout>
       <div className="bg-gradient-to-r from-white via-blue-50 to-white py-12">
         <div className="container mx-auto px-6 md:px-12 lg:px-24 text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6">
-            Fireblocks Summer School
+            {mainPageConfig.mainTitle}
             <br />
             <br />
-            <p className="text-4xl">Web3 Workshop</p>
+            <p className="text-4xl">{mainPageConfig.subTitle}</p>
           </h2>
           <p className="text-lg text-secondary mb-8">
-            Make sure that you have an active Fireblocks Sandbox Workspace.{" "}
-            <br></br>If you don{"'"}t - please click below to get a free one:
+            {mainPageConfig.heroText}
           </p>
           <div className="flex justify-center gap-4">
-            <Link
-              href="https://www.fireblocks.com/developer-sandbox-sign-up/"
-              legacyBehavior
-            >
+            <Link href={mainPageConfig.heroButtonLink} legacyBehavior>
               <a
                 className="text-primary px-6 py-3 border border-primary rounded-2xl text-sm hover:bg-blue-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Sandbox Signup
+                {mainPageConfig.heroButtonText}
               </a>
             </Link>
           </div>
@@ -39,32 +35,14 @@ export default function Home() {
           What You Will Do:
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className={cardClassName}>
-            <h4 className="text-xl font-semibold mb-2">General Setup</h4>
-            <p className="text-secondary">
-              Initialize the project and install dependencies.
-            </p>
-          </div>
-          <div className={cardClassName}>
-            <h4 className="text-xl font-semibold mb-2">
-              Install Open Source Tooling
-            </h4>
-            <p className="text-secondary">
-              Install and configure some EVM open source tooling like Hardhat and ethers.js
-            </p>
-          </div>
-          <div className={cardClassName}>
-            <h4 className="text-xl font-semibold mb-2">
-              Use Fireblocks Developer Tools
-            </h4>
-            <p className="text-secondary">Use the Fireblocks Developer tooling to integrate into Hardhat, Ethers.js and web3.js</p>
-          </div>
-          <div className={cardClassName}>
-            <h4 className="text-xl font-semibold mb-2">Create, Deploy and Mint an NFT</h4>
-            <p className="text-secondary">
-              Create a Smart Contract, deploy it using Fireblocks wallet and tools and mint your own NFT on Sepolia
-            </p>
-          </div>
+          {mainPageConfig.workshopSummarySteps.map((step, index) => {
+            return (
+              <div key={index} className="bg-white shadow-lg rounded-lg p-6 shadow-blue-200">
+                <h4 className="text-xl font-semibold mb-2">{step.title}</h4>
+                <p className="text-secondary">{step.text}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="flex justify-center gap-4 mb-10">

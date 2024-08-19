@@ -16,7 +16,7 @@ export default function Home() {
           </h2>
           <p className="text-lg text-secondary mb-8">
             Make sure that you have an active Fireblocks Sandbox Workspace.{" "}
-            <br></br>If you don't - please click below to get a free one:
+            <br></br>If you don{"'"}t - please click below to get a free one:
           </p>
           <div className="flex justify-center gap-4">
             <Link

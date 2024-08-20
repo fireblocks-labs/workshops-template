@@ -23,7 +23,7 @@ export default function Navbar() {
             Guide
           </Link>
           <div className="relative group flex items-center">
-            <Link href="https://discord.gg/QdxjMrVV" legacyBehavior>
+            <Link href="https://discord.gg/7h6bfRAq" legacyBehavior>
               <a
                 className="ml-4 text-blue-500 hover:text-blue-700"
                 target="_blank"

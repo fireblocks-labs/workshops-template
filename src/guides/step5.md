@@ -6,7 +6,7 @@
 2. We will need to generate our NFT image first.
 Let's use some AI tool to create an image. You can use whatever tool you prefer but some options (not limited to) are:
   - [Midjourney](https://www.midjourney.com/explore?tab=hot)
-  - [ImagingeArt](https://www.imagine.art/)
+  - [ImagineArt](https://www.imagine.art/)
   - [DaVinci](https://davinci.ai/)
 
 I am going to use the following image:

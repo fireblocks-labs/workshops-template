@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FiCheckCircle, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import Confetti from "react-confetti";
 import CodeWithCopy from "../components/CodeBlockWithCopy";
@@ -24,6 +24,8 @@ export default function StepsClient({ steps }: StepsClientProps) {
   const { width, height } = useWindowSize();
   const allStepsCompleted = completedSteps.length === steps.length;
 
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]); // Reference array for steps
+
   useEffect(() => {
     const savedCompletedSteps = JSON.parse(
       localStorage.getItem("completedSteps") || "[]"
@@ -44,8 +46,19 @@ export default function StepsClient({ steps }: StepsClientProps) {
 
   const handleNextStep = (currentStepId: number) => {
     setCompletedSteps((prev) => [...prev, currentStepId]);
-    setExpandedStep(currentStepId + 1);
-    setActiveStep(currentStepId + 1);
+    const nextStepId = currentStepId + 1;
+    setExpandedStep(nextStepId);
+    setActiveStep(nextStepId);
+
+    // Scroll to the next step after a short delay to ensure layout is updated
+    setTimeout(() => {
+      if (stepRefs.current[nextStepId]) {
+        stepRefs.current[nextStepId]?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100); // Delay to ensure the browser updates the layout before scrolling
   };
 
   const handleStartOver = () => {
@@ -63,9 +76,12 @@ export default function StepsClient({ steps }: StepsClientProps) {
             Prerequisites:
           </h3>
           <ul className="list-disc list-inside text-gray-700 mt-3">
-            {stepsPageConfig.prerequisites.map((prerequisite, index) => {
-              return <li key={index}>{prerequisite.text}</li>;
-            })}
+            {stepsPageConfig.prerequisites.map((prerequisite, index) => (
+              <li
+                key={index}
+                dangerouslySetInnerHTML={{ __html: prerequisite.text }}
+              />
+            ))}
           </ul>
         </div>
       )}
@@ -106,6 +122,9 @@ export default function StepsClient({ steps }: StepsClientProps) {
                       ? "bg-gray-100"
                       : "bg-gray-100 text-gray-400 cursor-not-allowed"
                   }`}
+                  ref={(el) => {
+                    stepRefs.current[step.id] = el;
+                  }} // Correctly assign the ref without returning anything
                 >
                   <div
                     className={`flex justify-between items-center ${

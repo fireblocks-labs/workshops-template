@@ -40,13 +40,13 @@ export const stepsPageConfig = {
       text: "Basic JavaScript knowledge"
     },
     {
-      text: "Node.js version >20 installed"
+      text: "Node.js version >20 installed. Follow the <a href='https://nodejs.org/en/download/package-manager' target='_blank' class='text-blue-500 underline hover:text-blue-700'>official documentation for installation.</a>"
     },
     {
       text: "NPM latest version installed"
     },
     {
-      text: "Fireblocks Sandbox Workspace"
+      text: "Fireblocks Sandbox Workspace. Get a free one <a href='https://www.fireblocks.com/developer-sandbox-sign-up/' target='_blank' class='text-blue-500 underline hover:text-blue-700'>here.</a>"
     },
     {
       text: "Fireblocks API Key"

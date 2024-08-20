@@ -61,4 +61,4 @@ module.exports = {
   },
 };
 ```
-
+#### Please make sure to update the `privateKey` and `apiKey` parameters with your values.

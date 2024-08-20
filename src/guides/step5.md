@@ -9,7 +9,7 @@ Let's use some AI tool to create an image. You can use whatever tool you prefer 
   - [ImagineArt](https://www.imagine.art/)
   - [DaVinci](https://davinci.ai/)
 
-I am going to use the following image:
+I am going to use the following image but you are more than welcome to use your imagination and go with anything you like!
 ![My Image](/summer-school-workshop/images/my-nft-dog.png)
 
 3. We need to upload this image somewhere so we will have a URL to add to our metadata. We will use Pinata, a convenient IPFS API and toolkit, to store our NFT asset and metadata to ensure our NFT is truly decentralized. If you don’t have a Pinata account, sign up for a free account [here](https://app.pinata.cloud/) and complete the steps to verify your email.

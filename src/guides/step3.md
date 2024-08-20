@@ -47,3 +47,9 @@ npm install --save-dev ethers
 ```bash
 npx hardhat compile
 ```
+
+The output might contain some warning messages, you can ignore these. 
+You are fine as long the final line of the ouput is:
+```bash
+Compiled 14 Solidity files successfully (evm target: istanbul).
+```

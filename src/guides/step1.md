@@ -26,19 +26,27 @@ npm install dotenv fs
 ``` 
 
 5. Create an API Key in Fireblocks:
-If it's your first time in the Sandbox workspace, click on "Developer Center" and follow the wizard to create the first API key. 
 
-If you do not have the wizard, follow the steps below:
+Run in the root directory `/my-nft`:
+```bash
+openssl req -new -newkey rsa:4096 -nodes -keyout fireblocks_secret.key -out fireblocks.csr -subj '/O=Workshop'
+```
+
+Now you have 2 additional files in the my-nft directory:
+1. `fireblocks_csr` - A public CSR file
+2. `fireblocks_secret.key` - A secret RSA key file
+
+Follow the steps below:
   - Login to the [Sandbox Workspace](https://sandbox.fireblocks.io)
-  - Click on `Developer Center` on the bottom of the left sidebar
+  - Click on `Developer Center` on the bottom of the left sidebar (clickthrough the inital wizard and ignore the first API key that is being created)
   - Click on `API Users` tab
   - Click on `Add API User`
   - Give a name to the API User
   - Choose the `Editor` role from the Role dropdown
-  - Select `Automatic CSR`
-  - Click on `Download private key`
+  - Select `Custom CSR`
+  - Upload the `fireblocks.csr` file
   - Click on `Add User`
-  - Save the private key file in the previously created `my-nft` directory
+  - Copy the API key value from the `ID` column
 
 6. Create a `.env` file in the root directory (`/my-nft`):
 ```bash

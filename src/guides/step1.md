@@ -33,13 +33,13 @@ Follow the steps below:
   - Click on `Developer Center` on the bottom of the left sidebar (clickthrough the inital wizard and ignore the first API key that is being created)
   - Click on `API Users` tab
   - Click on `Add API User`
-  - Give a name to the API User
+  - Give a name to the API User - `MyWorkshopKey`
   - Choose the `Editor` role from the Role dropdown
   - Select `Automatic CSR`
   - Click on `Download private key`
   - Click on `Add User`
   - Move the downloaded private key file (`fireblocks_secret.key`) to the `my-nft` directory
-  - Copy the API key value from the `ID` column
+  - Copy the API key value from the `ID` column in the `MyWorkshopKey` key row
 
 6. Create a `.env` file in the root directory (`/my-nft`):
 ```bash

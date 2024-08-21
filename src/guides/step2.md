@@ -44,6 +44,16 @@ npm install @fireblocks/hardhat-fireblocks
 require("@nomicfoundation/hardhat-toolbox");
 require("@fireblocks/hardhat-fireblocks");
 const { ApiBaseUrl } = require("@fireblocks/fireblocks-web3-provider");
+require("dotenv").config();
+const fs = require("fs")
+
+
+const apiKey = process.env.FIREBLOCKS_API_KEY;
+const secretKey = fs.readFileSync(
+  process.env.FIREBLOCKS_SECRET_KEY_PATH,
+  "utf-8"
+);
+
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -53,12 +63,12 @@ module.exports = {
       url: "https://ethereum-sepolia-rpc.publicnode.com",
       fireblocks: {
         apiBaseUrl: ApiBaseUrl.Sandbox,
-        privateKey: "<private key location>",
-        apiKey: "<your api key>",
+        privateKey: secretKey,
+        apiKey: apiKey,
         vaultAccountIds: "0",
       },
     },
   },
 };
+
 ```
-#### Please make sure to update the `privateKey` and `apiKey` parameters with your values.

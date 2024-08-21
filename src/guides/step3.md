@@ -38,12 +38,7 @@ contract MyNFT is ERC721URIStorage, Ownable {
 npm install @openzeppelin/contracts@4.8.1
 ```
 
-3. Install ethers.js:
-```bash
-npm install --save-dev ethers
-```
-
-6. Compile our contract:
+3. Compile our contract:
 ```bash
 npx hardhat compile
 ```

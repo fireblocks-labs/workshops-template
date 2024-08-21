@@ -19,11 +19,16 @@ main().catch((error) => {
 });
 ```
 
-2. Deploy our contract to Sepolia:
+2. Install ethers.js:
+```bash
+npm install --save-dev ethers
+```
+
+3. Deploy our contract to Sepolia:
 ```bash
 npx hardhat --network sepolia run scripts/deploy.js
 ```
 
-Save the address of the contract!
+### Make sure to save the address of the contract!
 
 

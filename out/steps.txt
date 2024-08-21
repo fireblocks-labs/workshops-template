@@ -1,6 +1,6 @@
 3:I[9275,[],""]
 4:I[1343,[],""]
-0:["reF_CeRJQM2DmSw4dymyO",[[["",{"children":["steps",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["steps",{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","steps","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_6aca40","style":{"fontFamily":"'Inter', Helvetica, sans-serif"},"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/summer-school-workshop/_next/static/css/d5df5257db734674.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$L5"]]]]]
+0:["rLA0CvKj2xWPhTmBbxBK0",[[["",{"children":["steps",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["steps",{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","steps","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_6aca40","style":{"fontFamily":"'Inter', Helvetica, sans-serif"},"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/summer-school-workshop/_next/static/css/d5df5257db734674.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$L5"]]]]]
 6:I[231,["956","static/chunks/ee560e2c-f0a2cdbdec1dce9d.js","30","static/chunks/30-db54e198538ed2a1.js","92","static/chunks/app/steps/page-03a40cb5ec0b6a74.js"],""]
 7:I[8173,["956","static/chunks/ee560e2c-f0a2cdbdec1dce9d.js","30","static/chunks/30-db54e198538ed2a1.js","92","static/chunks/app/steps/page-03a40cb5ec0b6a74.js"],"Image"]
 9:I[1298,["956","static/chunks/ee560e2c-f0a2cdbdec1dce9d.js","30","static/chunks/30-db54e198538ed2a1.js","92","static/chunks/app/steps/page-03a40cb5ec0b6a74.js"],"default"]
@@ -127,7 +127,7 @@ FIREBLOCKS_SECRET_KEY_PATH=<span class="hljs-string">"./fireblocks_secret.key"</
   },
 };
 
-</code></pre>c:Tbd1,<h3>Let's add our Smart Contract:</h3>
+</code></pre>c:Tb4e,<h3>Let's add our Smart Contract:</h3>
 <ol>
 <li>In the contracts directory, create a file called "MyNFT.sol" and paste the following contract code:</li>
 </ol>
@@ -166,11 +166,6 @@ contract <span class="hljs-title class_">MyNFT</span> is <span class="hljs-title
 <pre><code class="hljs language-bash">npm install @openzeppelin/contracts@4.8.1
 </code></pre>
 <ol start="3">
-<li>Install ethers.js:</li>
-</ol>
-<pre><code class="hljs language-bash">npm install --save-dev ethers
-</code></pre>
-<ol start="6">
 <li>Compile our contract:</li>
 </ol>
 <pre><code class="hljs language-bash">npx hardhat compile
@@ -178,7 +173,7 @@ contract <span class="hljs-title class_">MyNFT</span> is <span class="hljs-title
 <p>The output might contain some warning messages, you can ignore these.
 You are fine as long the final line of the ouput is:</p>
 <pre><code class="hljs language-bash">Compiled 14 Solidity files successfully (evm target: istanbul).
-</code></pre>d:T7f4,<h4>In this section we are going to write our Smart Contract deployment script and actually deploy our Smart Contract through your Fireblocks wallet!</h4>
+</code></pre>d:T886,<h4>In this section we are going to write our Smart Contract deployment script and actually deploy our Smart Contract through your Fireblocks wallet!</h4>
 <p>1.Create <code>deploy.js</code> file in the <code>scripts</code> directory and write our deploy script:</p>
 <pre><code class="hljs language-js"><span class="hljs-keyword">const</span> hre = <span class="hljs-built_in">require</span>(<span class="hljs-string">"hardhat"</span>);
 
@@ -197,11 +192,16 @@ You are fine as long the final line of the ouput is:</p>
 });
 </code></pre>
 <ol start="2">
+<li>Install ethers.js:</li>
+</ol>
+<pre><code class="hljs language-bash">npm install --save-dev ethers
+</code></pre>
+<ol start="3">
 <li>Deploy our contract to Sepolia:</li>
 </ol>
 <pre><code class="hljs language-bash">npx hardhat --network sepolia run scripts/deploy.js
 </code></pre>
-<p>Save the address of the contract!</p>e:T1dd5,<h4>NFT Creation</h4>
+<h3>Make sure to save the address of the contract!</h3>e:T1dd5,<h4>NFT Creation</h4>
 <ol>
 <li>
 <p>We need to create our NFT metadata now. The metadata will have an image URL and some details about the NFT we are creating.</p>

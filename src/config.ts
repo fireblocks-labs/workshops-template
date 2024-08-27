@@ -6,6 +6,7 @@ import {
 } from "./types";
 
 export const generalConfig: GeneralConfig = {
+  companyName: "Fireblocks",
   basePath: "/summer-school-workshop",
 };
 

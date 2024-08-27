@@ -17,10 +17,12 @@ All configuration is managed via the `src/config.ts` file. Here’s an overview 
 
 ### 🌐 General Configuration (`generalConfig`)
 - `basePath`: The base path for the app, used for GitHub Pages deployment. Set this to your repository name.
+- `companyName`: Your company name, used for the footer text.
 
 ```typescript
 export const generalConfig: GeneralConfig = {
-  basePath: "/your-repo-name",
+  companyName: "your-company-name",
+  basePath: "/your-repo-name"
 };
 ```
 
@@ -84,6 +86,15 @@ export const stepsPageConfig: StepsPageConfig = {
 1. **Workshop Steps**: Add your markdown files under the `src/guides` directory and reference them in `stepsData` in `stepsPageConfig`.
 2. **Logo**: Place your logo image in `public/images/logo.svg`.
 3. **Background**: If needed, place a background image in `public/images/background.svg`.
+
+### Navbar Customization:
+![Navbar Customization](public/docs/images/navbar.png)
+
+### Main Page Customization:
+![Main Page Customization](public/docs/images/mainPage.png)
+
+### Steps Page Customization:
+![Steps Page Customization](public/docs/images/stepsPage.png)
 
 ## 🚀 Deployment to GitHub Pages
 

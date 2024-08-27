@@ -40,7 +40,7 @@ export default async function Steps() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto px-6 py-12 md:px-12 lg:px-24">
+      <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <StepsClient steps={steps} />
       </div>
     </>

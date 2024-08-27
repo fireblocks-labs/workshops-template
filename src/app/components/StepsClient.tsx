@@ -70,7 +70,7 @@ export default function StepsClient({ steps }: StepsClientProps) {
   return (
     <>
       {!completedSteps.includes(steps.length) && (
-        <div className="bg-primary-50 border shadow-md shadow-primary-100 border-primary-200 rounded-lg p-6 mb-8">
+        <div className="bg-primary-50 border shadow-md shadow-primary-100 border-primary-200 rounded-lg p-6 mb-8 mt-7">
           <h3 className="text-2xl font-bold text-primary mb-4">
             Prerequisites:
           </h3>

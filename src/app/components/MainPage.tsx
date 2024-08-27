@@ -4,7 +4,7 @@ import Link from "next/link";
 export const MainPage = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-white via-primary-50 to-white py-12">
+      <div className="bg-gradient-to-r from-white via-primary-50 to-white py-12 mt-7">
         <div className="container mx-auto px-6 md:px-12 lg:px-24 text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6">
             {mainPageConfig.mainTitle}
@@ -18,7 +18,7 @@ export const MainPage = () => {
           <div className="flex justify-center gap-4">
             <Link href={mainPageConfig.heroButtonLink} legacyBehavior>
               <a
-                className="text-primary px-6 py-3 border border-primary rounded-2xl text-sm hover:bg-primary-100"
+                className="navbar-button"
                 target="_blank"
                 rel="noopener noreferrer"
               >

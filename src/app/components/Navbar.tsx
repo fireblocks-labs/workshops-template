@@ -11,8 +11,8 @@ export default function Navbar() {
 
   return (
     <header className="bg-white shadow-md shadow-primary-50 py-3">
-      <nav className="container mx-auto px-4 md:px-12 lg:px-24 flex justify-between items-center">
-        <Link href={navBarConfig.logoLink}>
+      <nav className="container mx-auto px-6 md:px-12 lg:px-24 flex justify-between items-center">
+        <Link className="navbar-link" href={navBarConfig.logoLink}>
           <Image
             src= {`${generalConfig.basePath}/images/logo.svg`}
             alt="Company Logo"
@@ -67,14 +67,14 @@ export default function Navbar() {
               </svg>
             </button>
           )}
-          <Link href="/" className="block text-secondary hover:text-primary text-xl">
+          <Link href="/" className="navbar-link">
             Home
           </Link>
-          <Link href="/steps" className="block text-secondary hover:text-primary text-xl">
+          <Link href="/steps" className="navbar-link">
             Guide
           </Link>
           {navBarConfig.discordLink && (
-            <Link href={navBarConfig.discordLink} legacyBehavior>
+            <Link href={navBarConfig.discordLink} legacyBehavior className="navbar-link">
               <a
                 className="text-primary-500 hover:text-primary-700 text-2xl"
                 target="_blank"
@@ -85,9 +85,9 @@ export default function Navbar() {
               </a>
             </Link>
           )}
-          <Link href={navBarConfig.navbarButtonLink} legacyBehavior>
+          <Link href={navBarConfig.navbarButtonLink} legacyBehavior className="navbar-link">
             <a
-              className="block bg-gradient-to-r from-primary-300 to-primary-600 text-white px-4 py-2 rounded-2xl text-md hover:from-primary hover:to-primary"
+              className="navbar-button w-[84px] h-[44px]"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -7,7 +7,7 @@ import {
 
 export const generalConfig: GeneralConfig = {
   companyName: "Fireblocks",
-  basePath: "/summer-school-workshop",
+  basePath: "/workshops-template",
 };
 
 

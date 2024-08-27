@@ -3,17 +3,17 @@
 import { useState, useEffect, useRef } from "react";
 import { FiCheckCircle, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import Confetti from "react-confetti";
-import CodeWithCopy from "../components/CodeBlockWithCopy";
+import CodeWithCopy from "./CodeBlockWithCopy";
 import { useWindowSize } from "react-use";
 import { mainPageConfig, stepsPageConfig } from "@/config";
 
-interface Step {
+type Step = {
   id: number;
   title: string;
   content: string | void;
 }
 
-interface StepsClientProps {
+type StepsClientProps = {
   steps: Step[];
 }
 
@@ -24,7 +24,7 @@ export default function StepsClient({ steps }: StepsClientProps) {
   const { width, height } = useWindowSize();
   const allStepsCompleted = completedSteps.length === steps.length;
 
-  const stepRefs = useRef<(HTMLDivElement | null)[]>([]); // Reference array for steps
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const savedCompletedSteps = JSON.parse(
@@ -50,7 +50,6 @@ export default function StepsClient({ steps }: StepsClientProps) {
     setExpandedStep(nextStepId);
     setActiveStep(nextStepId);
 
-    // Scroll to the next step after a short delay to ensure layout is updated
     setTimeout(() => {
       if (stepRefs.current[nextStepId]) {
         stepRefs.current[nextStepId]?.scrollIntoView({
@@ -58,7 +57,7 @@ export default function StepsClient({ steps }: StepsClientProps) {
           block: "start",
         });
       }
-    }, 100); // Delay to ensure the browser updates the layout before scrolling
+    }, 100);
   };
 
   const handleStartOver = () => {
@@ -71,7 +70,7 @@ export default function StepsClient({ steps }: StepsClientProps) {
   return (
     <>
       {!completedSteps.includes(steps.length) && (
-        <div className="bg-blue-50 border shadow-md shadow-blue-100 border-blue-200 rounded-lg p-6 mb-8">
+        <div className="bg-primary-50 border shadow-md shadow-primary-100 border-primary-200 rounded-lg p-6 mb-8">
           <h3 className="text-2xl font-bold text-primary mb-4">
             Prerequisites:
           </h3>
@@ -86,19 +85,19 @@ export default function StepsClient({ steps }: StepsClientProps) {
         </div>
       )}
 
-      <div className="container mx-auto px-6 py-12 md:px-12 lg:px-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {allStepsCompleted && (
           <>
             <Confetti width={width} height={height} />
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-blue-800 -600 mb-8">
+              <h2 className="text-3xl sm:text-4xl font-bold text-primary-800 mb-8">
                 Congratulations!
               </h2>
               <p className="text-lg text-gray-700 mb-8">
                 You have completed the {mainPageConfig.mainTitle} Workshop!
               </p>
               <button
-                className="bg-gradient-to-r from-blue-500 to-blue-800 text-white px-6 py-3 rounded-2xl hover:from-blue-700 hover:to-blue-700"
+                className="bg-gradient-to-r from-primary-300 to-primary-600 text-white px-6 py-3 rounded-2xl hover:from-primary hover:to-primary"
                 onClick={handleStartOver}
               >
                 Start Over
@@ -108,14 +107,14 @@ export default function StepsClient({ steps }: StepsClientProps) {
         )}
         {!allStepsCompleted && (
           <>
-            <h2 className="text-4xl font-bold text-primary mb-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-8 text-center">
               Workshop Steps
             </h2>
             <div className="space-y-4">
               {steps.map((step) => (
                 <div
                   key={step.id}
-                  className={`border border-blue-300 shadow-md shadow-blue-100 rounded-lg p-4 ${
+                  className={`border border-primary-200 shadow-md shadow-primary-100 rounded-lg p-4 sm:p-6 overflow-hidden ${
                     activeStep === step.id
                       ? "bg-white"
                       : completedSteps.includes(step.id)
@@ -124,7 +123,7 @@ export default function StepsClient({ steps }: StepsClientProps) {
                   }`}
                   ref={(el) => {
                     stepRefs.current[step.id] = el;
-                  }} // Correctly assign the ref without returning anything
+                  }}
                 >
                   <div
                     className={`flex justify-between items-center ${
@@ -139,7 +138,9 @@ export default function StepsClient({ steps }: StepsClientProps) {
                     }
                   >
                     <div className="flex items-center">
-                      <h3 className="text-xl font-semibold">{step.title}</h3>
+                      <h3 className="text-lg sm:text-xl font-semibold">
+                        {step.title}
+                      </h3>
                     </div>
                     <div className="flex items-center space-x-2">
                       {completedSteps.includes(step.id) && (
@@ -155,15 +156,15 @@ export default function StepsClient({ steps }: StepsClientProps) {
                   </div>
                   {expandedStep === step.id && (
                     <>
-                      <div className="mt-10 flex justify-center">
-                        <div className="prose prose-lg">
+                      <div className="mt-4 sm:mt-6 flex justify-center">
+                        <div className="prose prose-sm sm:prose-lg max-w-full">
                           <CodeWithCopy htmlContent={step.content as string} />
                         </div>
                       </div>
                       {activeStep === step.id && (
-                        <div className="w-full flex justify-center mt-6">
+                        <div className="w-full flex justify-center mt-4 sm:mt-6">
                           <button
-                            className="bg-gradient-to-r from-white to-blue-50 text-blue-500 border border-blue-500 px-4 py-2 rounded-2xl hover:from-blue-100 hover:to-blue-100"
+                            className="bg-gradient-to-r from-white to-primary-50 text-primary-500 border border-primary-200 px-4 py-2 sm:px-6 sm:py-3 rounded-2xl hover:from-primary hover:to-primary hover:text-white"
                             onClick={() => handleNextStep(step.id)}
                           >
                             Complete

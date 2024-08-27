@@ -8,7 +8,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#0056D2', 
+        primary: {
+          DEFAULT: '#0056D2',
+          50: '#ebf2ff',
+          100: '#c2d4ff',
+          200: '#9ab6ff',
+          300: '#7297ff',
+          400: '#4978ff',
+          500: '#215aff',
+          600: '#0044bf',
+          700: '#00349a',
+          800: '#002676',
+          900: '#001951',
+        },
         secondary: '#2A2D34',
         accent: '#F7B801',
         lightGray: '#F4F5F7',

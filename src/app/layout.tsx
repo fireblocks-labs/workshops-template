@@ -1,3 +1,4 @@
+import { generalConfig, mainPageConfig } from "@/config";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -5,9 +6,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fireblocks Workshop",
+  title: `${mainPageConfig.subTitle}`,
   icons: {
-    icon: "https://www.fireblocks.com/wp-content/uploads/2020/10/cropped-FAVICON-2-32x32.png",
+    icon: "https://openmoji.org/data/color/svg/1F4D6.svg",
   },
 };
 
@@ -18,7 +19,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ fontFamily: "'Inter', Helvetica, sans-serif" }}>{children}</body>
+      <body
+        className={inter.className}
+        style={{
+          backgroundColor: "#fffefe",
+          backgroundImage: `url(${generalConfig.basePath}/images/background.svg)`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "20px 20px",
+          backgroundPosition: "top left",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh"
+        }}
+      >
+        {children}{" "}
+      </body>
     </html>
   );
 }

@@ -4,12 +4,12 @@ This project is a fully configurable **Next.js application** designed to run cus
 
 ## ✨ Features
 
-- 🔧  **Configurable workshop content**: Adjust all workshop details directly from the `src/config.ts` file.
-- 🖥️  **Two main pages**:
+- **Configurable workshop content**: Adjust all workshop details directly from the `src/config.ts` file.
+- **Two main pages**:
   - **Main page**: Overview of the workshop, including key CTAs.
   - **Steps page**: Detailed step-by-step guide for the workshop.
-- 💾  **Step completion tracking**: Saves progress in local storage, allowing users to continue where they left off, even after a page refresh.
-- 🚀  **GitHub Pages deployment**: Preconfigured to deploy the app to GitHub Pages via GitHub Actions.
+- **Step completion tracking**: Saves progress in local storage, allowing users to continue where they left off, even after a page refresh.
+- **GitHub Pages deployment**: Preconfigured to deploy the app to GitHub Pages via GitHub Actions.
 
 ## ⚙️ Configuration
 

@@ -2,6 +2,8 @@
 
 This project is a fully configurable **Next.js application** designed to run customer workshops. It features a main overview page and a step-by-step guide page, all managed through a single configuration file.
 
+Live example at: [](https://fireblocks-labs.github.io/workshops-template/)
+
 ## ✨ Features
 
 - **Configurable workshop content**: Adjust all workshop details directly from the `src/config.ts` file.

@@ -10,7 +10,7 @@ Let's use some AI tool to create an image. You can use whatever tool you prefer 
   - [DaVinci](https://davinci.ai/)
 
 I am going to use the following image but you are more than welcome to use your imagination and go with anything you like!
-![My Image](/summer-school-workshop/images/my-nft-dog.png)
+![My Image](/workshops-template/images/my-nft-dog.png)
 
 3. We need to upload this image somewhere so we will have a URL to add to our metadata. We will use Pinata, a convenient IPFS API and toolkit, to store our NFT asset and metadata to ensure our NFT is truly decentralized. If you don’t have a Pinata account, sign up for a free account [here](https://app.pinata.cloud/) and complete the steps to verify your email.
 
@@ -93,10 +93,10 @@ mintNFT(`https://gateway.pinata.cloud/ipfs/${metadataCID}`);
   - `contractAddress` - this is the address of the deployed contract from the previous step
   - `metadataCID` - this is the CID of the uploaded metadata file to Pinata (do not get confused with the image CID here)
 
-8. Run the `mint-nft.js` script (make sure to run it from the root directore - `/my-nft`):
+8. Run the `mint-nft.js` script (make sure to run it from the root directory- `/my-nft`):
 `node scripts/mint-nft.js`
 
-9. Go to your Fireblocks Sandbox workspace -> `NFTs` section on the left hand sidebar and explore your newly created NFT
+9. Go to your Fireblocks Sandbox workspace -> `NFTs` section on the left hand sidebar and explore your newly created NFT!
 
 
 ### And we're done :)

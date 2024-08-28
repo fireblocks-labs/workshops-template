@@ -19,7 +19,7 @@ html, body {
 }
 
 .navbar-button {
-  @apply bg-gradient-to-r from-primary-300 to-primary-600 text-white px-6 py-3 rounded-2xl text-sm hover:from-primary hover:to-primary;
+  @apply bg-gradient-to-r from-primary-400 to-primary-600 text-white px-6 py-3 rounded-2xl text-sm hover:from-primary hover:to-primary;
 }
 
 

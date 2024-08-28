@@ -1,6 +1,7 @@
 import { generalConfig, mainPageConfig } from "@/config";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Layout from "./components/Layout";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,7 +32,9 @@ export default function RootLayout({
           minHeight: "100vh"
         }}
       >
-        {children}{" "}
+        <Layout>
+          {children}
+        </Layout>
       </body>
     </html>
   );
